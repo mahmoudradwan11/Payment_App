@@ -6,6 +6,7 @@ class ApiConstant{
   static const getOrderId = '/ecommerce/orders';
   static const getPaymentKey ='/acceptance/payment_keys';
   static const getRefCode = '/acceptance/payments/pay';
+  static String visaUrl = '$baseUrl/acceptance/iframes/722023?payment_token=$finalToken';
   static String paymentFirstToken = '';
   static String paymentOrderId = '';
   static  String idKiosk = '3293606';

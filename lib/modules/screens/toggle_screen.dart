@@ -4,6 +4,7 @@ import 'package:payment_app/core/controller/cubit.dart';
 import 'package:payment_app/core/controller/states.dart';
 import 'package:payment_app/core/network/constant.dart';
 import 'package:payment_app/modules/screens/ref_code.dart';
+import 'package:payment_app/modules/screens/visa.dart';
 
 class ToggleScreen extends StatelessWidget {
   const ToggleScreen({Key? key}) : super(key: key);
@@ -51,7 +52,12 @@ class ToggleScreen extends StatelessWidget {
                   ),
                       Expanded(child:
                   InkWell(
-                    onTap:(){},
+                    onTap:(){
+                      Navigator.push(
+                          context, MaterialPageRoute(builder:(context)
+                      =>const VisaScreen(),
+                      ));
+                    },
                     child: Container(
                       width: double.infinity,
                       decoration: BoxDecoration(
