@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:payment_app/core/controller/cubit.dart';
 import 'package:payment_app/core/controller/states.dart';
@@ -7,6 +8,10 @@ import 'package:payment_app/modules/screens/register_screen.dart';
 import 'core/network/dio_helper.dart';
 void main()async{
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,
+  ));
   DioHelper.initDio();
   runApp(const MyApp());
 }
