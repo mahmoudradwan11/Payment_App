@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:lottie/lottie.dart';
 import 'package:payment_app/core/controller/cubit.dart';
 import 'package:payment_app/core/controller/states.dart';
 import 'package:payment_app/modules/screens/toggle_screen.dart';
@@ -40,8 +41,10 @@ class RegisterScreen extends StatelessWidget {
                     Container(
                         width: double.infinity,
                         height: 350,
-                        child: const Image(
-                            image: AssetImage('images/Delivery.png'))),
+                        child:Lottie.asset(
+                          'lottie/payment.json'
+                        )
+                    ),
                     Form(
                       key: formKey,
                       child: Column(
